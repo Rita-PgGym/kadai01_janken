@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+<!-- ver.05:CSSを触り続ける。思っているレイアウトに少しでも近づける-->
+<div class="wrapper">
+    <header>
+        <h1>いっしょにじゃんけんしよう！</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li id="guu_btn"><img src = "img/guu.jpg"></li>
+            <li id="cho_btn"><img src = "img/cho.jpg"></li>
+            <li id="par_btn"><img src = "img/par.jpg"></li>
+        </ul>
+        <div class="playroom">
+            <div class="taro-chan">
+                <!-- <div><span id="pc_hands"></span></div> -->
+                <div id="pc_hands"></div>
+            </div>
+            <div class="result">
+                <div id="judgment"></div>    
+            </div>
+        </div>
+    </main>
+
+    <footer>Copyrights 2024 Rita's Pg Gym All RIghts Reserved.</footer>
+
+</div>
+
+    <script>
+        // 繰り返し出てくるものをグローバル定数で定義しておく
+        const win_img = '<img src = "img/win.jpg">';
+        const drw_img = '<img src = "img/drw.jpg">';
+        const los_img = '<img src = "img/los.jpg">';
+        const pc_guu = '<img src = "img/pc_guu.png">';
+        const pc_cho = '<img src = "img/pc_cho.png">';
+        const pc_par = '<img src = "img/pc_par.png">';
+
+        // 私がグーを出す(グーボタンを監視してクリックされたら)
+        $("#guu_btn").on("click",function(){
+            const r = Math.ceil( Math.random()*3 ); // 乱数を作る
+            if (r == 1){ // 乱数で1が出たら
+                $("#pc_hands").html(pc_guu);
+                $("#judgment").html(drw_img);
+            }else if (r == 2){ // 乱数で2が出たら
+                $("#pc_hands").html(pc_cho);
+                $("#judgment").html(win_img);
+            }else if  (r == 3){ // 乱数で3が出たら
+                $("#pc_hands").html(pc_par);
+                $("#judgment").html(los_img);
+            }
+        })
+
+        // 私がチョキを出す(チョキボタンを監視してクリックされたら)
+        $("#cho_btn").on("click",function(){
+            const r = Math.ceil( Math.random()*3 ); // 乱数を作る
+            if (r == 1){ // 乱数で1が出たら
+                $("#pc_hands").html(pc_guu);
+                $("#judgment").html(los_img);
+            }else if (r == 2){ // 乱数で2が出たら
+                $("#pc_hands").html(pc_cho);
+                $("#judgment").html(drw_img);
+            }else if  (r == 3){ // 乱数で3が出たら
+                $("#pc_hands").html(pc_par);
+                $("#judgment").html(win_img);
+            }
+        })
+
+        // 私がパーを出す(チョキボタンを監視してクリックされたら)
+        $("#par_btn").on("click",function(){
+            const r = Math.ceil( Math.random()*3 ); // 乱数を作る
+            if (r == 1){ // 乱数で1が出たら
+                $("#pc_hands").html(pc_guu);
+                $("#judgment").html(win_img);
+            }else if (r == 2){ // 乱数で2が出たら
+                $("#pc_hands").html(pc_cho);
+                $("#judgment").html(los_img);
+            }else if  (r == 3){ // 乱数で3が出たら
+                $("#pc_hands").html(pc_par);
+                $("#judgment").html(drw_img);
+            }
+        })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    width: 600px;
+}
+
+.playroom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taro-chan{
+    width: 40%;
+}
+
+.result{
+    width: 60%;
+}
+
+#pc_hands{
+    width: 100%;
+}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+
+ul{
+    /* display: flex; */
+    width: 100%;
+    align-items: center;
+    padding: 5px;
+    margin: 25px 0 25px 0;
+    /* display:table;  定義 */
+    /* table-layout: fixed; */
+}
+
+li{
+    list-style-type:none;
+    border: 35px solid #c7c7c7;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    padding: 15px;
+    align-self: center;
+}
+
+li img{
+    width: 100%;   /* 定義 */
+}
+
+li img{
+display: block;
+}
+
+li:hover{
+    /* background: #0066CC; */
+    background: #e4c0f8;
+    color:#fff;
+}
+
+
+div #judgement img{
+    align-items: center;
+}
+
